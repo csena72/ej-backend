@@ -2,13 +2,13 @@ const mongoose = require("mongoose");
 const { MONGO_URI } = require("../../config/globals");
 
 exports.getConnection = async () => {
-  try {
+  try {    
     await mongoose.connect(MONGO_URI, {
-      useNewUrlParser: true,
+      useNewUrlParser: true,      
       useUnifiedTopology: true,
     });
     return "Connection Success!";
   } catch (error) {
-    return "Connection Failed!";
+    return `Connection Failed! ${error}`;
   }
 };

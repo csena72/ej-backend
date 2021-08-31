@@ -1,4 +1,4 @@
-const { userModel } = require('../dao/models/user');
+const  userModel = require('../dao/models/user');
 
 module.exports = class {
 
@@ -11,7 +11,7 @@ module.exports = class {
     }
 
     async getAllUsers(){
-        return userModel.find();
+        return await userModel.find();
     }
 
     async updateUser(id, userUpdate){

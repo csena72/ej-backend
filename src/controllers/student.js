@@ -8,7 +8,7 @@ exports.createUser = async (req, res,next) => {
 } 
 
 exports.findAllUser = async (req, res,next) => {
-    const allUsers = await user.findAllUser();
+    const allUsers = await user.getAllUsers();
     res.json(allUsers);
 }
 
